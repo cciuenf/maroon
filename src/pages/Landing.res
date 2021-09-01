@@ -1,1 +1,1 @@
-let default = () => <h1> {`HEEEELLO`->React.string} </h1>
+let default = () => <h1> {`HELLO`->React.string} </h1>

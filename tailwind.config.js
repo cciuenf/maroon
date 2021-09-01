@@ -1,11 +1,6 @@
 module.exports = {
-  mode: 'jit',
   purge: {
-    content: [
-      './src/components/**/*.res',
-      './src/layouts/**/*.res',
-      './src/*.res',
-    ],
+    content: ['./src/**/*.res'],
     options: {
       safelist: ['html', 'body'],
     },
