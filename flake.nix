@@ -24,7 +24,7 @@
           # TODO: we need to build this package any way haha
 
           meta = with pkgs.lib; {
-            license = licenses.gpl3Plus;
+            license = licenses.bsd3;
             maintainers = with maintainers; [ matdsoupe ];
           };
         };
