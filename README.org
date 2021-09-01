@@ -6,6 +6,8 @@
 
 Front end para a Plataforma Digital PEA Pescarte
 
+AVISO: o rescript precisa ser instalado e executado localmente. Ainda não encontrei uma forma de fazê-lo funciona dentro do Docker
+
 -----
 
 ** Setup
