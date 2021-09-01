@@ -1,0 +1,37 @@
+{
+  "$schema": "https://raw.githubusercontent.com/rescript-lang/rescript-compiler/master/docs/docson/build-schema.json",
+  "name": "maroon",
+  "version": "0.0.1",
+  "reason": {
+    "react-jsx": 3
+  },
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": "pages",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "suffix": ".mjs",
+  "bs-dependencies": [
+    "@rescript/react",
+    "bs-css",
+    "bs-css-emotion",
+    "rescript-polished",
+    "@ryyppy/rescript-promise"
+  ],
+  "warnings": {
+    "error": "+102"
+  },
+  "gentypeconfig": {
+    "language": "typed",
+    "shims": []
+  }
+}

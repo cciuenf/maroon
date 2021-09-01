@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  maroon:
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      args:
+        NODE_ENV: development
+    container_name: pescarte_maroon
+    command: yarn dev
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/maroon
+    networks:
+      - pescarte
+    logging:
+      driver: json-file
+      options:
+        max-size: '50m'
+        max-file: '10'
+
+networks:
+  pescarte:
+    external:
+      name: pescarte

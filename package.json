@@ -1,0 +1,36 @@
+{
+  "name": "maroon",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "debug": "NODE_OPTIONS='--inspect' next",
+    "build": "yarn res:build && next build",
+    "start": "next start -p $PORT",
+    "res:watch": "rescript build -w",
+    "res:build": "rescript build",
+    "res:clean": "rescript clean",
+    "res:format": "rescript format -all"
+  },
+  "dependencies": {
+    "next": "11.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-query": "^3.21.0"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^11.1.0",
+    "@rescript/react": "0.10.3",
+    "@ryyppy/rescript-promise": "2.1.0",
+    "autoprefixer": "^10.3.1",
+    "bs-css-emotion": "3.0.0",
+    "cssnano": "^5.0.8",
+    "gentype": "^4.1.0",
+    "next-transpile-modules": "8.0.0",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "rescript": "^9.1.4",
+    "rescript-polished": "1.15.0",
+    "tailwindcss": "^2.2.7"
+  }
+}

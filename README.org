@@ -1,0 +1,86 @@
+#+title: Maroon
+#+description: Plataforma Digital PEA Pescarte
+
+#+caption: CI
+[[https://github.com/cciuenf/maroon/workflows/rescript_ci/badge.svg?branch=dev]]
+
+Front end para a Plataforma Digital PEA Pescarte
+
+-----
+
+** Setup
+
+*** GitHub Packages
+
+Antes de subir o ambiente com Docker, é necessário autenticar-se no GitHub Packages. Crie um token acessando
+as [[https://github.com/settings/profile][configurações do seu perfil GitHub]] > Developer Settings >
+Personal Access Tokens. Para saber quais são as permissões necessárias para o token, leia a
+[[https://docs.github.com/pt/packages/learn-github-packages/about-permissions-for-github-packages][documentação]]
+sobre o GitHub Packages.
+
+Após criar o token, já é possível fazer a autenticação no GitHub Packages:
+
+#+begin_src sh
+echo "<personal_token>" | docker login ghcr.io -u USERNAME --password-stdin
+#+end_src
+
+*** Requerimentos mínimos
+
+| requirement                              | release |
+|------------------------------------------+---------+
+| [[https://nodejs.org/en/][nodejs]]       | 16.5.0+ |
+| [[https://rescript-lang.org/][rescript]] | 0.19.5+ |
+| [[https://yarnpkg.com/][yarn]]           | 1.22.5+ |
+
+-----
+
+** Ambiente de Desenvolvimento
+
+*** Primeira vez rodando
+
+É necessário instalar as dependências do projeto, além de iniciar o servidor de desenvolvimento. Para isso, há um node script especial, chamo =start=, que instala essas dependências e sobe o servidor.
+
+#+begin_src sh
+docker-compose build
+docker-compose run --rm maroon yarn start
+#+end_src
+
+Caso queria apenas instalar as dependências, execute este comando dentro do diretório do projeto:
+
+#+begin_src sh
+docker-compose run --rm maroon yarn
+#+end_src
+
+*** Sempre que for rodar o projeto
+
+Há uma segunda versão desse node script, chamdo =dev= que apenas sobe o servidor sem instalar as dependências.
+
+#+begin_src sh
+docker-compose up
+#+end_src
+
+*** Para atualizar ou instalar novas dependências
+
+#+begin_src sh
+docker-compose run --rm maroon yarn
+#+end_src
+
+*** Para criar uma nova página
+
+Documentação: https://www.elm-spa.dev/guide/01-cli#elm-spa-add
+
+#+begin_src sh
+docker-compose run --rm maroon yarn elm-spa add /<página>
+#+end_src
+
+*** Portas expostas no sistema do host
+
+Para acessar o servidor de desenvolvimento, acesse o link "Network", que é fornecido assim que o servidor for iniciado.
+
+| container | port |
+|-----------+------+
+| maroon    | 3000 |
+
+** Materiais, Tutoriais, Relatórios e extras
+
+Todo o material do projeto (tanto backend ou frontend) pode ser encontrado no repositório [[https://github.com/cciuenf/documentos_pea_pescarte][documentos_pea_pescarte]], que abriga diversos artigos.
