@@ -1,78 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font: 400 1.125rem 'Open Sans', sans-serif;
-  background: #f0f0f5;
-  -webkit-font-smoothing: antialiased;
+    font: 400 1.125rem 'Open Sans', sans-serif;
+    background: #1a85af;
+    -webkit-font-smoothing: antialiased;
 }
 
 input,
 button,
 textarea {
-  font: 400 1.5rem 'Open Sans', sans-serif;
+    font: 400 1.5rem 'Open Sans', sans-serif;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 form input {
-  width: 100%;
-  height: 3.75rem;
-  color: #333;
-  border: 1px solid #dcdce6;
-  border-radius: 8px;
-  padding: 0 24px;
+    width: 100%;
+    height: 3.75rem;
+    color: #333;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    padding: 0 24px;
 }
 
 form textarea {
-  resize: vertical;
-  width: 100%;
-  min-height: 8.75rem;
-  color: #333;
-  border: 1px solid #dcdce6;
-  border-radius: 8px;
-  padding: 16px 24px;
-  line-height: 1.5rem;
+    resize: vertical;
+    width: 100%;
+    min-height: 8.75rem;
+    color: #333;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    padding: 16px 24px;
+    line-height: 1.5rem;
 }
 
 .button {
-  width: 100%;
-  height: 3.75rem;
-  border: 0;
-  border-radius: 8px;
-  color: #fff;
-  font-weight: 700;
-  margin-top: 1rem;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.125rem;
-  line-height: 3.75rem;
-  transition: 0.2s;
+    width: 100%;
+    height: 3.75rem;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 1rem;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.125rem;
+    line-height: 3.75rem;
+    transition: 0.2s;
 }
 
 .button:hover {
-  filter: brightness(90%);
+    filter: brightness(90%);
 }
 
 .nav-link {
-  @apply text-2xl font-medium text-center;
+    @apply text-2xl font-medium text-center;
 }
 
 .btn {
-  @apply text-2xl font-medium text-center;
+    @apply text-2xl font-medium text-center;
+}
+
+.nav-link {
+    color: #212121 !important;
+    font-weight: 500;
+    transition: all 200ms linear;
+    
 }

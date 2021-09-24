@@ -1,5 +1,6 @@
 open UserTypes
 
+let logo = "logo.png"
 module Head = Next.Head
 
 let queryClient = ReactQuery.Provider.createClient()
@@ -27,9 +28,11 @@ let make = (~children) => {
     </Head>
     <ReactQuery.Provider client={queryClient}>
       <UserProvider value=(state.user, dispatch)>
-        <header> <h1> {`FIX ME`->React.string} </h1> </header>
+       <Header/>
+
         <main> children </main>
-        <footer> <h1> {`FIX ME`->React.string} </h1> </footer>
+       
+        <Footer />
       </UserProvider>
     </ReactQuery.Provider>
   </>
