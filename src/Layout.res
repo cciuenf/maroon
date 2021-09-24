@@ -28,10 +28,8 @@ let make = (~children) => {
     </Head>
     <ReactQuery.Provider client={queryClient}>
       <UserProvider value=(state.user, dispatch)>
-       <Header/>
-
+        <Header />
         <main> children </main>
-       
         <Footer />
       </UserProvider>
     </ReactQuery.Provider>
