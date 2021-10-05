@@ -3,8 +3,7 @@ let make = () => {
   let (click, setclick) = React.useState(() => false)
   Js.log(click)
 
-  
-  <nav className=" flex items-center justify-between flex-wrap bg-white p-6">
+  <nav className=" flex items-center justify-between flex-wrap bg-white p-2">
     <div className=" ml-10">
       <img className="rounded-lg shadow-xl w-80 h-26" src="assets/logoPescarte.png" />
     </div>
@@ -18,7 +17,7 @@ let make = () => {
       </button>
     </div>
     <div className=" w-full block relative flex-grow lg:flex lg:items-center  lg:w-auto" id="menu">
-      <div className="menu  md:absolute md:flex mt-10 md:mt-0 lg:flex-grow justify-evenly items-baseline ">
+      <div className="menu md:absolute md:flex mt-10 md:mt-0 justify-evenly">
         <a className="" href="/#"> {`Perfil`->React.string} </a>
         <a className="" href="/#"> {`Relatórios`->React.string} </a>
         <a className="" href="/#"> {`Mídias`->React.string} </a>
