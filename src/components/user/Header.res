@@ -17,8 +17,8 @@ let make = () => {
         </svg>
       </button>
     </div>
-    <div className=" w-full block flex-grow lg:flex lg:items-center  lg:w-auto" id="menu">
-      <div className="menu md:flex mt-10 md:mt-0 lg:flex-grow justify-evenly items-baseline ">
+    <div className=" w-full block relative flex-grow lg:flex lg:items-center  lg:w-auto" id="menu">
+      <div className="menu  md:absolute md:flex mt-10 md:mt-0 lg:flex-grow justify-evenly items-baseline ">
         <a className="" href="/#"> {`Perfil`->React.string} </a>
         <a className="" href="/#"> {`Relatórios`->React.string} </a>
         <a className="" href="/#"> {`Mídias`->React.string} </a>
