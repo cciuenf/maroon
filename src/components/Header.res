@@ -42,7 +42,7 @@ let make = () => {
       </button>
     </div>
     <div
-      className="w-full block relative flex-grow lg:flex lg:items-center  lg:w-auto md:hidden sm:hidden">
+      className="w-full block relative flex-grow lg:flex lg:items-center hidden md:flex lg:w-auto">
       <Menu />
     </div>
     <div className="w-full block relative flex-grow lg:hidden">
