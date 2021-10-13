@@ -32,7 +32,7 @@ let make = () => {
     <div className="ml-10">
       <img className="rounded-lg shadow-xl w-80 h-26" src="assets/logoPescarte.png" />
     </div>
-    <div className="block lg:hidden ">
+    <div className="block md:hidden ">
       <button className="flex items-center px-3 py-2 " onClick={_e => dispatch(Toggle)}>
         <svg
           className="fill-current h-8 w-8 " viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -42,10 +42,10 @@ let make = () => {
       </button>
     </div>
     <div
-      className="w-full block relative flex-grow lg:flex lg:items-center hidden md:flex lg:w-auto">
+      className="w-full block relative flex-grow lg:flex lg:items-center hidden md:block md:w-auto lg:w-auto">
       <Menu />
     </div>
-    <div className="w-full block relative flex-grow lg:hidden">
+    <div className="w-full block relative flex-grow md:hidden">
       {switch state {
       | Open => <Menu />
       | Closed => React.null
