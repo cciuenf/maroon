@@ -18,6 +18,7 @@ module.exports = {
       orange: '#F8961E',
       yellow: '#F5BD00',
       red: '#FF635D',
+      white: '#FFFFFF',
     },
     fontSize: {
       xs: '.75rem',
