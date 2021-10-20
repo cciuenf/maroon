@@ -3,8 +3,7 @@ let default = () => {
   //let router = Router.useRouter()
   let editIcon = "/assets/icons/editar_perfil.svg"
   let pwdChange = "/assets/icons/cadeado.svg"
-  let plus = "/assets/icons/cadeado.svg"
-  <div className="flex bg-blue-500 h-screen">
+  <div className="flex h-screen">
     // div absoluta, corpo da pagina
     <div className="flex flex-row font-sans sm:space-x-8 md:space-x-24 lg:space-x-0">
       // div que contém os dados a esquerda e direita
@@ -13,18 +12,17 @@ let default = () => {
         // div a esquerda
         <div className="flex flex-col space-y-6 uppercase text-white items-center">
           //div nome foto participaçao
-          <div className="bg-blue-100 rounded-full">
-            // div foto
-            <img width="150" height="150" src="/assets/icons/foto_perfil.svg" />
-          </div>
+          <span className="bg-blue-100 rounded-full">
+            // span foto
+            <Next.Image width="150" height="150" src="/assets/icons/foto_perfil.svg" />
+          </span>
           <div className="font-bold text-2xl"> {`nome do pesquisador`->React.string} </div>
           <div className="font-semibold text-xl"> {`tipo de participação`->React.string} </div>
         </div>
-        <div className="flex flex-col space-y-3 text-blue-700">
+        <div className="flex flex-col space-y-3 text-blue-700 justify-evenly">
           // div botões
-          <div> <Button label="editar perfil" onClick={_e => ()} icon={editIcon} /> </div>
-          <div> <Button label="alterar senha" onClick={_e => ()} icon={pwdChange} /> </div>
-          <div> <Button label="ver mais" onClick={_e => ()} icon={plus} /> </div>
+          <Button label="editar perfil" onClick={_e => ()} icon={editIcon} />
+          <Button label="alterar senha" onClick={_e => ()} icon={pwdChange} />
         </div>
       </div>
       <div className="flex flex-col w-4/6 text-white mt-24">

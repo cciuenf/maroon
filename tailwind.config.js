@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: {
     content: ['./src/**/*.res'],
@@ -18,7 +20,7 @@ module.exports = {
       orange: '#F8961E',
       yellow: '#F5BD00',
       red: '#FF635D',
-      white: '#FFFFFF',
+      white: colors.white,
     },
     fontSize: {
       xs: '.75rem',
