@@ -22,10 +22,15 @@
   "suffix": ".mjs",
   "bs-dependencies": [
     "@rescript/react",
+    "@rescriptbr/reform",
+    "reschema",
     "bs-css",
     "bs-css-emotion",
     "rescript-polished",
     "@ryyppy/rescript-promise"
+  ],
+   "ppx-flags": [
+    "lenses-ppx/ppx"
   ],
   "warnings": {
     "error": "+102"
