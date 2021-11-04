@@ -13,16 +13,15 @@
     "res:format": "rescript format -all"
   },
   "dependencies": {
-    "@rescriptbr/reform": "^11.0.1",
     "next": "11.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-query": "^3.21.0",
-    "reschema": "^2.0.3"
+    "react-query": "^3.21.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^11.1.0",
     "@rescript/react": "0.10.3",
+    "@rescriptbr/reform": "^11.0.1",
     "@ryyppy/rescript-promise": "2.1.0",
     "autoprefixer": "^10.3.1",
     "bs-css-emotion": "3.0.0",
@@ -32,6 +31,7 @@
     "next-transpile-modules": "8.0.0",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
+    "reschema": "^2.0.3",
     "rescript": "^9.1.4",
     "rescript-polished": "1.15.0",
     "tailwindcss": "^2.2.7"

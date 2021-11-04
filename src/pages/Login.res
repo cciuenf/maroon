@@ -22,7 +22,6 @@ let default = () => {
     ~validationStrategy=OnChange,
     ~onSubmit,
     ~initialState,
-    
     ~schema={
       open UserForm.Validation
       Schema(nonEmpty(Cpf) + nonEmpty(Password))
@@ -34,26 +33,20 @@ let default = () => {
       ReactEvent.Synthetic.preventDefault(event)
       form.submit()
     }}>
-    <div className="login-page">
-      <div className="form">
-        <form className="login-form">
-          <input
-            value={form.values.cpf}
-            onChange={ReForm.Helpers.handleChange(form.handleChange(FormFields.Cpf))}
-            type_="text"
-            placeholder="CPF"
-          />
-          <input
-            placeholder="SENHA"
-            onChange={ReForm.Helpers.handleChange(form.handleChange(FormFields.Password))}
-            value={form.values.password}
-            type_="password"
-          />
-          <button type_="submit" disabled={form.formState === Submitting}>
-            {`Acessar`->React.string}
-          </button>
-        </form>
-      </div>
-    </div>
+    <input
+      value={form.values.cpf}
+      onChange={ReForm.Helpers.handleChange(form.handleChange(FormFields.Cpf))}
+      type_="text"
+      placeholder="CPF"
+    />
+    <input
+      placeholder="SENHA"
+      onChange={ReForm.Helpers.handleChange(form.handleChange(FormFields.Password))}
+      value={form.values.password}
+      type_="password"
+    />
+    <button type_="submit" disabled={form.formState === Submitting}>
+      {`Acessar`->React.string}
+    </button>
   </form>
 }
