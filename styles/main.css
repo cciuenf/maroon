@@ -90,12 +90,10 @@ form textarea {
 
 form {
     position: relative;
-    z-index: 1;
     max-width: 360px;
     margin: 0 auto 100px;
     padding: 45px;
     text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 form button {
@@ -105,8 +103,6 @@ form button {
     background: #ffffff;
     width: 50%;
     border-radius: 40px;
-    border-color: rgb(0, 0, 0);
-    border-width: 1px;
     padding: 10px;
     color: #1a85af;
     font-size: 10px;
