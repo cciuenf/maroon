@@ -92,7 +92,6 @@ form textarea {
 }
 
 .menu a {
-    display: block;
     height: 10%;
     font-size: 20px;
     display: flex;
@@ -104,18 +103,18 @@ form textarea {
     text-align: center;
 }
 
-.triangulo {
+triangulo {
     width: 0;
     height: 0;
     margin-top: 20px;
     border-style: solid;
     border-width: 160px 100px 0 100px;
-    border-color: #F2A000 transparent transparent transparent;
+    border-color: #00f234 transparent transparent transparent;
 }
 
 .menu a:hover {
     color: #fff;
-    background-color: #F2A000;
+    background-color: #F2A000;   
     height: 180px;
     padding: 14px;
 }
@@ -123,8 +122,12 @@ form textarea {
 @media only screen and (max-width: 780px) {
     .menu a:hover {
         color: #fff;
-        background-color: #F2A000;
-        height: 18px;
-        padding: 14px;
+        transition: none;
+        height: 10%;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 }

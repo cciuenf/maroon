@@ -17,7 +17,7 @@ module Menu = {
   @react.component
   let make = () =>
     <div className="menu md:absolute md:flex mt-10 md:mt-0 justify-evenly">
-      <a className="" href="/#"> {`Perfil`->React.string} </a>
+      <a className="teste" href="/#"> {`Perfil`->React.string} </a>
       <a className="" href="/#"> {`Relatórios`->React.string} </a>
       <a className="" href="/#"> {`Mídias`->React.string} </a>
       <a className="" href="/#"> {`Agenda`->React.string} </a>
