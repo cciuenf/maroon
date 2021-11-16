@@ -2,8 +2,6 @@ open UserTypes
 
 module Head = Next.Head
 
-GlobalStyles.addStyles()
-
 let queryClient = ReactQuery.Provider.createClient()
 
 type state = {user: user}

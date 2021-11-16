@@ -27,7 +27,9 @@
     "bs-css",
     "bs-css-emotion",
     "rescript-polished",
-    "@ryyppy/rescript-promise"
+    "@ryyppy/rescript-promise",
+    "@rescriptbr/reform",
+    "reschema"
   ],
    "ppx-flags": [
     "lenses-ppx/ppx"
@@ -38,5 +40,8 @@
   "gentypeconfig": {
     "language": "typed",
     "shims": []
-  }
+  },
+  "ppx-flags": [
+    "lenses-ppx/ppx" 
+  ]
 }
