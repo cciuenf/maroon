@@ -29,7 +29,8 @@
     "rescript-polished",
     "@ryyppy/rescript-promise",
     "@rescriptbr/reform",
-    "reschema"
+    "reschema",
+    "rescript-jzon"
   ],
    "ppx-flags": [
     "lenses-ppx/ppx"
