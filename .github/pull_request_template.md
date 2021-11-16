@@ -3,7 +3,7 @@ Descrição do que é esperado deste PR
 
 
 ## Stories relacionadas (clubhouse)
-- [ch-xxx]
+- [sc-xxxx]
 
 
 ## Pontos para atenção

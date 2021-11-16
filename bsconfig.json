@@ -25,7 +25,9 @@
     "bs-css",
     "bs-css-emotion",
     "rescript-polished",
-    "@ryyppy/rescript-promise"
+    "@ryyppy/rescript-promise",
+    "@rescriptbr/reform",
+    "reschema"
   ],
   "warnings": {
     "error": "+102"
@@ -33,5 +35,8 @@
   "gentypeconfig": {
     "language": "typed",
     "shims": []
-  }
+  },
+  "ppx-flags": [
+    "lenses-ppx/ppx" 
+  ]
 }

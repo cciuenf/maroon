@@ -23,14 +23,17 @@
   "devDependencies": {
     "@next/bundle-analyzer": "^11.1.0",
     "@rescript/react": "0.10.3",
+    "@rescriptbr/reform": "^11.0.1",
     "@ryyppy/rescript-promise": "2.1.0",
     "autoprefixer": "^10.3.1",
     "bs-css-emotion": "3.0.0",
     "cssnano": "^5.0.8",
     "gentype": "^4.1.0",
+    "lenses-ppx": "^6.1.10",
     "next-transpile-modules": "8.0.0",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
+    "reschema": "^2.0.3",
     "rescript": "^9.1.4",
     "rescript-polished": "1.15.0",
     "tailwindcss": "^2.2.7"
