@@ -51,7 +51,7 @@ let default = () => {
         // div direita
         <div className="uppercase font-bold text-2xl mb-4"> {`biografia`->React.string} </div>
         <textarea
-          placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam tincidunt erat, convallis luctus ex sollicitudin vel. Sed vel euismod tellus. Sed ut orci eu ante pulvinar commodo vel in magna. Maecenas malesuada dolor sed semper dictum. Morbi tincidunt pretium interdum. Vestibulum rhoncus, diam sed semper scelerisque, nulla odio viverra nibh, vitae finibus nibh tortor at quam. Nunc et euismod odio. Morbi tempus luctus nulla sed pretium. Pellentesque pretium gravida libero quis placerat. Phasellus lacinia nunc in velit viverra faucibus. Fusce nec erat vel ligula fringilla luctus sed ut sem. Proin quis enim vitae augue rhoncus tincidunt. Aenean dignissim augue vitae odio gravida ornare.
+          value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam tincidunt erat, convallis luctus ex sollicitudin vel. Sed vel euismod tellus. Sed ut orci eu ante pulvinar commodo vel in magna. Maecenas malesuada dolor sed semper dictum. Morbi tincidunt pretium interdum. Vestibulum rhoncus, diam sed semper scelerisque, nulla odio viverra nibh, vitae finibus nibh tortor at quam. Nunc et euismod odio. Morbi tempus luctus nulla sed pretium. Pellentesque pretium gravida libero quis placerat. Phasellus lacinia nunc in velit viverra faucibus. Fusce nec erat vel ligula fringilla luctus sed ut sem. Proin quis enim vitae augue rhoncus tincidunt. Aenean dignissim augue vitae odio gravida ornare.
 Sed tempor lorem nisl, non pulvinar tortor semper ut. Nullam in nisi id ante ullamcorper dapibus rhoncus ac metus. Nulla facilisi. Curabitur nulla ante, dignissim id nunc non, porttitor commodo sapien. Morbi non facilisis augue, ut vestibulum magna. Nunc placerat urna gravida nibh congue commodo. Nullam volutpat scelerisque nisl, id tincidunt orci auctor vitae. Suspendisse at magna venenatis, egestas lorem sed, euismod justo. Quisque elementum, lectus a accumsan gravida, lacus odio tempus felis, in gravida enim lorem at odio. Aliquam tincidunt mauris velit, nec vehicula risus mattis et. Proin viverra libero nec nunc consectetur dignissim. Suspendisse"
           type_="description"
           disabled={edit}
@@ -63,7 +63,7 @@ Sed tempor lorem nisl, non pulvinar tortor semper ut. Nullam in nisi id ante ull
         />
         <div className="uppercase font-bold text-2xl mb-4"> {`lattes`->React.string} </div>
         <input
-          placeholder="https://lattes.cnpq.br/"
+          value="https://lattes.cnpq.br/"
           type_="lattes"
           disabled={edit}
           className={switch edit {
