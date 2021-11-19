@@ -30,7 +30,8 @@
     "@ryyppy/rescript-promise",
     "@rescriptbr/reform",
     "reschema",
-    "rescript-jzon"
+    "rescript-jzon",
+    "@rescriptbr/ancestor"
   ],
    "ppx-flags": [
     "lenses-ppx/ppx"

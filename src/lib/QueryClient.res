@@ -21,7 +21,7 @@ let post = (~url, body) => {
         "method": "POST",
         "body": switch body {
         | Some(body) => Js.Json.stringifyAny(body)
-        | None => Some("{")
+        | None => Some("{}")
         },
         "headers": {
           "content-type": "application/json",
