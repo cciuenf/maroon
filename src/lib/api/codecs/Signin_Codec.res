@@ -4,6 +4,7 @@ type request = {
 }
 
 type jwtResponse = {
+  id: string,
   celular: string,
   cpf: string,
   dataNascimento: string,
@@ -32,8 +33,9 @@ let response = Codecs.dataResponse(
     user => {user: user}->Ok,
     Jzon.field(
       "user",
-      Jzon.object9(
+      Jzon.object10(
         ({
+          id,
           celular,
           cpf,
           dataNascimento,
@@ -44,6 +46,7 @@ let response = Codecs.dataResponse(
           permissoes,
           token,
         }) => (
+          id,
           celular,
           cpf,
           dataNascimento,
@@ -55,6 +58,7 @@ let response = Codecs.dataResponse(
           token,
         ),
         ((
+          id,
           celular,
           cpf,
           dataNascimento,
@@ -66,6 +70,7 @@ let response = Codecs.dataResponse(
           token,
         )) =>
           {
+            id: id,
             celular: celular,
             cpf: cpf,
             dataNascimento: dataNascimento,
@@ -76,6 +81,7 @@ let response = Codecs.dataResponse(
             permissoes: permissoes,
             token: token,
           }->Ok,
+        Jzon.field("id", Jzon.string),
         Jzon.field("celular", Jzon.string),
         Jzon.field("cpf", Jzon.string),
         Jzon.field("dataNascimento", Jzon.string),

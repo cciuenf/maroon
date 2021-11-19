@@ -1,3 +1,5 @@
+open Router
+
 type signinError = InvalidLogin | UnexpectedError
 
 type hookResult = {
@@ -6,14 +8,12 @@ type hookResult = {
   error: option<signinError>,
 }
 
-type response = SigninCodec.response
+type response = Signin_Codec.response
 
-module Router = Next.Router
-
-let handleFetch = (payload: SigninCodec.request) => {
+let handleFetch = (payload: Signin_Codec.request) => {
   open Promise
 
-  QueryClient.post(~url="/login", Some(payload))->thenResolve(json => json->Jzon.decodeWith(SigninCodec.response))
+  QueryClient.post(~url="/login", Some(payload))->thenResolve(json => json->Jzon.decodeWith(Signin_Codec.response))
 }
 
 let useSignin = (router) => {
@@ -24,9 +24,13 @@ let useSignin = (router) => {
 
     switch result {
       | Ok({data}: response) =>
+      Storage.set(#user_id, data.user.id)
+      ->then(_ => resolve())
+      ->ignore
+
       Storage.set(#token, data.user.token)
       ->then(_ => {
-        Router.push(router, "/app/profile")
+        Router.push(router, Profile(data.user.id))
         resolve()
       })
       ->ignore
@@ -78,10 +82,10 @@ let useSignin = (router) => {
   React.useEffect0(() => {
     open Promise
 
-    Storage.get(#token)
-    ->thenResolve(token =>
-      switch token {
-      | Some(_) => Router.push(router, "/app/profile")
+    Storage.get(#user_id)
+    ->thenResolve(userId =>
+      switch userId {
+      | Some(id) => Router.push(router, Profile(id))
       | None => ()
       }
     )

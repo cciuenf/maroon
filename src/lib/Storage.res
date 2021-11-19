@@ -1,4 +1,4 @@
-type keys = [#token]
+type keys = [#token | #user_id]
 
 let set = (key: keys, value) => LocalForage.setItem((key :> string), value)
 
