@@ -1,7 +1,7 @@
 module Array = Js.Array2
 
 let hasInvalidFields = (fieldState: array<('a, ReForm.fieldState)>) => {
-  fieldState->Array.some(((_, state)) => 
+  fieldState->Array.some(((_, state)) =>
     switch state {
     | Error(_)
     | Pristine
