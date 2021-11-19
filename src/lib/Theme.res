@@ -46,5 +46,5 @@ module Spacing = {
   let make = (value: float) => value->(v => v *. 0.8)->Js.Float.toString ++ "rem"
 }
 
-let fontFamily = "'DM Sans', sans-serif"
+let fontFamily = "'Open Sans', sans-serif"
 let wrapperMaxW = #rem(144.0)
