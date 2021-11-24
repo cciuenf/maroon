@@ -1,18 +1,4 @@
 // open Next
-module FormFields = %lenses(
-  type state = {
-    description: string,
-    lattes: string,
-  }
-)
-
-include ReForm.Make(FormFields)
-
-let initialState: FormFields.state = {
-  description: "",
-  lattes: "",
-}
-
 let default = () => {
   let (edit, setEdit) = React.useState(() => true)
   //let router = Router.useRouter()
