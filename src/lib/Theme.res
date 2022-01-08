@@ -15,36 +15,6 @@ module Colors = {
   let white = "#fff"
 
   let black = "#000"
-
-  module Ancestor = {
-    let blue = #hex(blue)
-    let blue2 = #hex(blue2)
-    let lightBlue1 = #hex(lightBlue)
-    let darkBlue = #hex(darkBlue)
-
-    let green = #hex(green)
-
-    let orange = #hex(orange)
-
-    let yellow = #hex(yellow)
-
-    let red = #hex(red)
-
-    let white = #hex(white)
-
-    let black = #hex(black)
-  }
-}
-
-module Radius = {
-  let small = "6px"
-  let medium = "12px"
-  let large = "16px"
-}
-
-module Spacing = {
-  let make = (value: float) => value->(v => v *. 0.8)->Js.Float.toString ++ "rem"
 }
 
 let fontFamily = "'Open Sans', sans-serif"
-let wrapperMaxW = #rem(144.0)
