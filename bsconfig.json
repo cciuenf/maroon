@@ -21,14 +21,13 @@
   },
   "suffix": ".mjs",
   "bs-dependencies": [
-    "@rescript/react",
     "bs-css",
     "bs-css-emotion",
+    "@rescript/react",
     "rescript-polished",
     "@ryyppy/rescript-promise",
     "@rescriptbr/reform",
-    "reschema",
-    "@rescriptbr/ancestor"
+    "reschema"
   ],
   "warnings": {
     "error": "+102"
