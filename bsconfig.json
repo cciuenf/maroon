@@ -27,7 +27,8 @@
     "rescript-polished",
     "@ryyppy/rescript-promise",
     "@rescriptbr/reform",
-    "reschema"
+    "reschema",
+    "rescript-chakra"
   ],
   "warnings": {
     "error": "+102"
