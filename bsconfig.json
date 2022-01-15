@@ -38,6 +38,6 @@
     "shims": []
   },
   "ppx-flags": [
-    "lenses-ppx/ppx" 
+    "lenses-ppx/ppx"
   ]
 }
