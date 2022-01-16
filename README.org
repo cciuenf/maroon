@@ -2,11 +2,7 @@
 #+description: Plataforma Digital PEA Pescarte
 
 #+caption: CI
-[[https://github.com/cciuenf/maroon/workflows/rescript_ci/badge.svg?branch=dev]]
-
 Front end para a Plataforma Digital PEA Pescarte
-
-AVISO: o rescript precisa ser instalado e executado localmente. Ainda não encontrei uma forma de fazê-lo funciona dentro do Docker
 
 -----
 
@@ -40,29 +36,55 @@ echo "<personal_token>" | docker login ghcr.io -u USERNAME --password-stdin
 
 *** Primeira vez rodando
 
-É necessário instalar as dependências do projeto, além de iniciar o servidor de desenvolvimento. Para isso, há um node script especial, chamo =start=, que instala essas dependências e sobe o servidor.
+É necessário construir as imagens do =Docker= ou baixá-las via =Github Packages=.
+
+Para construí-las localmente, execute (isso levará um tempo considerável):
 
 #+begin_src sh
 docker-compose build
 #+end_src
 
+Caso queira baixar as imagena já existentes, execute:
+
+#+begin_src sh
+docker pull ghcr.io/cciuenf/pescarte_maroon_rescript:latest
+#+end_src
+
+para baixar a imagem que executa o compilador do =ReScript=, e execute:
+
+#+begin_src sh
+docker pull ghcr.io/cciuenf/pescarte_maroon_next:latest
+#+end_src
+
+que baixará a imagem que levanta o servidor web em modo de desenvolvimento.
+
 *** Sempre que for rodar o projeto
 
-Há uma segunda versão desse node script, chamdo =dev= que apenas sobe o servidor sem instalar as dependências.
+Para iniciar o fluxo de desenvolvimento, é preciso iniciar o compilador do =ReScript= em modo de escuta e levantar o servidor web em modo de desenvolvimento. Para isso, execute:
 
 #+begin_src sh
 docker-compose up
 #+end_src
 
+Lembre-se que para esse comando funcionar, é necessário ter as imagens do =Docker= contruídas ou baixadas.
+
 *** Para atualizar ou instalar novas dependências
 
+Se a dependência for apenas do contexto do =NodeJS= / =NextJS=:
+
 #+begin_src sh
-docker-compose run --rm maroon yarn
+docker-compose run --rm next yarn
+#+end_src
+
+Caso seja uma dependência do =ReScript=, execute o comando anterior e o seguinte:
+
+#+begin_src sh
+docker-compose run --rm rescript yarn
 #+end_src
 
 *** Portas expostas no sistema do host
 
-Para acessar o servidor de desenvolvimento, acesse o link "Network", que é fornecido assim que o servidor for iniciado.
+Para acessar o servidor de desenvolvimento, acesse o [[http://localhost:3000][localhost]].
 
 | container | port |
 |-----------+------+

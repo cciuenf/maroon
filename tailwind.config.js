@@ -7,7 +7,18 @@ module.exports = {
   },
   darkMode: false,
   theme: {
-    extend: {},
+    colors: {
+      blue: {
+        100: '#BCE0EF',
+        300: '#88B8CC',
+        500: '#277DA1',
+        700: '#0E4771',
+      },
+      green: '#25CE52',
+      orange: '#F8961E',
+      yellow: '#F5BD00',
+      red: '#FF635D',
+    },
     fontSize: {
       xs: '.75rem',
       sm: '.875rem',
@@ -22,30 +33,8 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        'Helvetica Neue',
-        'Arial',
-        'sans-serif',
-      ],
-      serif: [
-        'Georgia',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        'Helvetica Neue',
-        'Arial',
-        'sans-serif',
-      ],
-      mono: [
-        'Menlo',
-        'Monaco',
-        'Consolas',
-        'Roboto Mono',
-        'SFMono-Regular',
-        'Segoe UI',
-        'Courier',
-        'monospace',
-      ],
+        'Open Sans'
+      ]
     },
   },
   variants: {
