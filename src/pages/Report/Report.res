@@ -5,7 +5,7 @@ let default = () =>{
       {`Relatório Mensal de Pesquisa em Mês e ano`->React.string} </div>
       <span className="text-blue-500 uppercase font-black bg-white rounded-3xl
                        box-border text-center"> {`Voltar`->React.string} </span>
-    //  <Button `Voltar`/>
+    // Inserir Componente do Botão..... <Button `Voltar`/>
       <TextBox placeholder=`Ações de Planejamento e Construção da Pesquisa`/>
       <TextBox placeholder=`Participação em Grupos de Estudo`/>
       <TextBox placeholder=`Reuniões de Orientação`/>
